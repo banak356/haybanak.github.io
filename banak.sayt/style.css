@@ -1,0 +1,204 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #4c7c59; /* Основной камуфляжный фон */
+    background-image: 
+        radial-gradient(circle at 20% 30%, #6d9f72, transparent 30%),
+        radial-gradient(circle at 60% 70%, #3b6248, transparent 25%),
+        radial-gradient(circle at 80% 20%, #2e4837, transparent 20%),
+        radial-gradient(circle at 40% 80%, #557e63, transparent 35%),
+        radial-gradient(circle at 10% 70%, #4b6b56, transparent 40%);
+    background-size: 400px 400px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Заголовок */
+header {
+    background: linear-gradient(135deg, #0a3d62, #1e73be);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    animation: fadeIn 2s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+/* Навигация */
+nav {
+    background: #1e73be;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1.5s ease-out;
+}
+
+/* Заголовки в контейнере */
+.container h2, .container h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1e73be;
+    padding-bottom: 5px;
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 300px; /* Фиксированная ширина */
+    height: 180px; /* Фиксированная высота */
+    object-fit: cover; /* Сохранение пропорций внутри заданных размеров */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Статьи */
+article {
+    margin-bottom: 40px;
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Стили для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #1e73be;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+}
+
+form button {
+    background: #1e73be;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #ffd700;
+}
+
+/* Видео */
+video {
+    border: 3px solid #1e73be;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background: #0a3d62;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.photo-container {
+    display: flex; /* Используем Flexbox для выравнивания изображений */
+    justify-content: space-between; /* Пространство между фотографиями */
+    gap: 10px; /* Отступ между фотографиями */
+}
+
+.dirq {
+    width: 48%; /* Ширина каждой фотографии (оставляем место для отступа) */
+    border-radius: 10px;
+    object-fit: cover; /* Корректное отображение изображения в рамке */
+}
